@@ -19,4 +19,53 @@ Epiblast – стадия эпибласта, примерно 6.5 дней по
 
 Ссылка на мой google colab: https://colab.research.google.com/drive/155xF7xRqzN_EgZfak5Sv5-_DHxg9j7zv?usp=sharing
 
-> 
+#### Анализ качества чтений
+По сравнению с обычным секвенированием ДНК, качество хорошее и отсутствуют адаптеры.
+![image](https://user-images.githubusercontent.com/59726719/154686109-14d9b323-a42b-4063-81f8-278cb698c836.png)
+
+Мало цитозина, но при этом тимина больше, чем в обычном DNA-seq.
+![image](https://user-images.githubusercontent.com/59726719/154686188-45b41ad5-f0f4-4cc0-9257-8a45da9697b6.png)
+
+
+#### Работа с данными о метилировании
+
+> В таблице отражено покрытие участков ридами и процент дуплицированных чтений:
+![image](https://user-images.githubusercontent.com/59726719/154680079-e8e8c236-3756-4f33-9cc9-7ad085a93fe2.png)
+
+> Коллинг метелирования - выполнено
+
+> M-bias графики:
+> 1. Для 8-cell: процент CpG метилирования около 43-44%
+![image](https://user-images.githubusercontent.com/59726719/154681422-1335f476-f12a-4edc-b6a2-5ac51f4f05a0.png)
+![image](https://user-images.githubusercontent.com/59726719/154681475-4f951e73-54e2-4cfe-adfe-01195edcfaf5.png)
+
+> 2. Для ICM: заметен самый маленький процент CpG метилирования - около 23-24%
+![image](https://user-images.githubusercontent.com/59726719/154681620-dac4cb8c-ba0d-46ca-91ac-bcbf7e0a87d6.png)
+![image](https://user-images.githubusercontent.com/59726719/154681672-0fcc1866-28a4-45cf-9c9a-1a9faa11941c.png)
+
+> 3. Для epiblast: заметен самый большой процент CpG метилирования - около 76-78%
+![image](https://user-images.githubusercontent.com/59726719/154681757-9ddd4309-21a5-42db-94d3-80ff988f7188.png)
+![image](https://user-images.githubusercontent.com/59726719/154681802-8efa54d9-8867-4745-80fb-f2353e9e5b54.png)
+
+Если рассматривать другие значения, то зависимости примерно одинаковы для каждого типа тканей:
+- CHH и CHG метилирования примерно равны нулю для обоих ридов;
+- Во 2-м риде процент метиляции СHH падает.
+
+#### Гистограммы распределения метилирования
+Полученные графики схожи с теми, что были приведены в статье. 
+- В ICM большая часть цитозина не метилирована;
+- На стадии эпибласта высокий уровень метилирования; 
+- В образце из 8-клеточного эмбриона распределение ближе к равномерному.
+![image](https://user-images.githubusercontent.com/59726719/154682829-110aad40-aa79-4f0d-9e44-f5b582f39f3d.png)
+![image](https://user-images.githubusercontent.com/59726719/154682863-46ed6098-6d8c-4d27-8415-b06966ed1794.png)
+![image](https://user-images.githubusercontent.com/59726719/154682908-818104c5-69f1-4cdb-8cf4-a96567d3be59.png)
+
+
+#### Графики покрытия и метилирования
+Регион, который был выбран: chr11:10'000'000-10'500'000
+
+> Уровень покрытия чтениями:
+![coverage_1](https://user-images.githubusercontent.com/59726719/154683212-d4fa0237-042f-4185-82e3-c6de4841fc4b.png)
+
+> Уровень метилирования:
+![coverage_2](https://user-images.githubusercontent.com/59726719/154683251-09af8167-c923-49fb-91ef-431503c054e2.png)
